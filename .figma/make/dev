@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "V3- Accounting Hub Website"
+exec pnpm dlx vite --port "$PORT" --host --strictPort

@@ -628,8 +628,11 @@ main { padding-top: var(--header-h); }
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: -.02em;
+  max-width: 5.8em; /* 406px at 70px: wraps to three lines per design */
 }
 .home-hero .lead { margin-top: 26px; font-size: clamp(16px, 1.45vw, 21px); line-height: 1.75; color: var(--text-soft); max-width: 540px; }
+.hero-mock { width: 100%; max-width: 561px; justify-self: start; zoom: .637; }
+@media (max-width: 760px) { .hero-mock { zoom: 1; } }
 .hero-actions { margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap; }
 
 .hero-stats { margin-top: 46px; display: flex; gap: clamp(20px, 4vw, 34px); flex-wrap: wrap; }

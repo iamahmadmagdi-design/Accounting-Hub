@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Static HTML site: no build step; the site directory is the build output.
+BUILD_DIR="V3- Accounting Hub Website"
+[[ -f "$BUILD_DIR/index.html" ]] || {
+  echo "Expected build output at $BUILD_DIR" >&2
+  exit 1
+}
+figma make deploy-preview --build-dir "$BUILD_DIR"
